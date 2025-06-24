@@ -3,7 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .landing-page {
@@ -11,6 +15,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #f8f8f8;
+  overflow: hidden;
 }
 
 .background-image {
@@ -20,36 +25,36 @@
   width: 100%;
   height: 100%;
   background-image: url('https://cdn.pixabay.com/photo/2017/07/13/08/59/greenhouse-2499758_1280.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   filter: brightness(0.8);
 }
+
 .content {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
- top: 100px;
   backdrop-filter: blur(4px);
   background-color: rgba(0,0,0,0.5);
   gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .landing_content {
- margin-top: 430px;
-  margin-left: 100px;
-  transform: translate(-50%, -50%);
+  position: relative;
   z-index: 1;
   text-align: center;
-  /* background-color: red; */
   width: 400px;
-  height: 400px;
+  max-width: 90vw;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  padding: 20px;
 }
 
 .content p,
@@ -120,28 +125,47 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    padding: 10px;
   }
 
   .landing_content {
-    margin-top: 100px; /* Adjust as needed */
-    margin-left: 0;
-    width: 80%; /* Adjust as needed */
+    width: 90%;
+    max-width: 350px;
     text-align: center;
+    padding: 15px;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .content p {
+    font-size: 20px;
   }
 
   .aboutus_container {
-    margin-top: 20px; /* Adjust as needed */
-    width: 80%; /* Adjust as needed */
+    width: 90%;
+    max-width: 350px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .landing_content {
-    margin-top: 50px; /* Adjust as needed */
-    width: 90%; /* Adjust as needed */
+    width: 95%;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 18px;
   }
 
   .aboutus_container {
-    width: 90%; /* Adjust as needed */
+    width: 95%;
+    max-width: 300px;
   }
 }
